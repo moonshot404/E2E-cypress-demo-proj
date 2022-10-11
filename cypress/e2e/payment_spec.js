@@ -1,11 +1,24 @@
 const { v4: uuidv4 } = require('uuid');
 
 describe('payment', () => {
+    it('user can sign up', () => {
+        cy.visit('/');
+        
+        cy.findByRole('link', {  name: /don't have an account\? sign up/i}).click();
+        cy.findByRole('textbox', {  name: /first name/i}).type('Jm');
+        cy.findByRole('textbox', {  name: /last name/i}).type('Albasin');
+        cy.findByRole('textbox', {  name: /username/i}).type('tester_405');
+        cy.get('#password').type('tester405');
+        cy.get('#confirmPassword').type('tester405');
+        cy.get('[data-test="signup-submit"]').click();
+
+        
+    });
     it('user can make payment', () => {
         //  login
         cy.visit('/');
-        cy.findByRole('textbox', { name: /username/i }).type('johndoe');
-        cy.findByLabelText(/password/i).type('s3cret');
+        cy.findByRole('textbox', { name: /username/i }).type('tester_405');
+        cy.findByLabelText(/password/i).type('tester405');
         cy.findByRole('checkbox', { name: /remember me/i }).check();
         cy.findByRole('button', { name: /sign in/i }).click();
 
@@ -17,8 +30,8 @@ describe('payment', () => {
         cy.findByRole('button', { name: /new/i }).click();
 
         // search for user
-        cy.findByRole('textbox').type('devon becker');
-        cy.findByText(/devon becker/i).click();
+        cy.findByRole('textbox').type('John Doe');
+        cy.findByText(/John Doe/i).click();
 
         // add amount and note and click pay
         const paymentAmount = "5.00";
