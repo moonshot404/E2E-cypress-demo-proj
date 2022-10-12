@@ -69,7 +69,16 @@
       "modifiedAt": "2022-10-11T14:34:19.154Z"
     }
   ],
-  "likes": [],
+  "likes": [
+    {
+      "id": "c7lwhq6al",
+      "uuid": "d798e694-0110-412c-aeeb-e1743ed72be9",
+      "userId": "dJFs4ciDx",
+      "transactionId": "tFySgoJPi",
+      "createdAt": "2022-10-11T15:51:56.587Z",
+      "modifiedAt": "2022-10-11T15:51:56.587Z"
+    }
+  ],
   "comments": [],
   "notifications": [
     {
@@ -81,6 +90,26 @@
       "isRead": false,
       "createdAt": "2022-10-11T14:34:19.173Z",
       "modifiedAt": "2022-10-11T14:34:19.173Z"
+    },
+    {
+      "id": "zSzUXgxKBx",
+      "uuid": "4f383b67-302a-45c0-845d-d8e8b6c8edbb",
+      "userId": "dJFs4ciDx",
+      "transactionId": "tFySgoJPi",
+      "likeId": "c7lwhq6al",
+      "isRead": false,
+      "createdAt": "2022-10-11T15:51:56.594Z",
+      "modifiedAt": "2022-10-11T15:51:56.595Z"
+    },
+    {
+      "id": "J5C9BEgtBK",
+      "uuid": "3461773a-4f30-4fcd-9da4-d1a216d71f8e",
+      "userId": "t45AiwidW",
+      "transactionId": "tFySgoJPi",
+      "likeId": "c7lwhq6al",
+      "isRead": false,
+      "createdAt": "2022-10-11T15:51:56.595Z",
+      "modifiedAt": "2022-10-11T15:51:56.595Z"
     }
   ],
   "banktransfers": []
