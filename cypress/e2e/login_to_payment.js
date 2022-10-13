@@ -6,14 +6,14 @@ describe('payment', () => {
         //  login
         cy.visit('/');
     
-        // cy.findByRole('textbox', { name: /username/i }).type('tester_404');
-        cy.findByLabelText(/password/i).type('tester404');
+        cy.findByRole('textbox', {  name: /username/i}).type('tester_404');
+        cy.get('#password').type('tester404');
         cy.findByRole('checkbox', { name: /remember me/i }).check();
         cy.findByRole('button', { name: /sign in/i }).click();
 
         // Check account balance
         let oldBalance;
-        cy.get('[data-test=sidenav-user-balance]').then($balance => oldBalance = $balance.text());
+        cy.get('[data-test="sidenav-user-balance"]').then($balance => oldBalance = $balance.text());
 
         // click on new button
         cy.findByRole('button', { name: /new/i }).click();
